@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRef } from 'react'; //change-1
-import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser'; //change-2  (install this by runnig command "npm i @emailjs/browser --force")
 import './Contact.css'
 import { BsLinkedin, BsGithub, BsFacebook } from "react-icons/bs";
 import { FaWhatsappSquare } from "react-icons/fa";
@@ -8,8 +8,8 @@ import Rotate from 'react-reveal/Rotate';
 import Zoom from 'react-reveal/Zoom';
 
 const Contact = () => {
-    const form = useRef() //change-2
-    const sendEmail = (e) => {//change-3 (whole function, from line 12 to 22)
+    const form = useRef() //change-3
+    const sendEmail = (e) => {//change-4 (whole function, from line 12 to 22)
         e.preventDefault();
 
         emailjs.sendForm('service_yw5wwhw', 'template_0f4c0fk', form.current, 'Z4X7Z2z8wD-0mQDez')
@@ -51,7 +51,7 @@ const Contact = () => {
                                         </div>
 
                                         <form className="row px-3 mb-4 mx-1" ref={form} onSubmit={sendEmail}> 
-                                       {/*   //change-4  (here only "ref={form} onSubmit={sendEmail}" portion is added as new funtionality for sending the email).
+                                       {/*   //change-5  (here only "ref={form} onSubmit={sendEmail}" portion is added as new funtionality for sending the email).
                                           and the value of 'name' attribute(for e.g: name="user_name") of each input does matters because the value of "name" is set as
                                           a variable in the templete of email at emailjs.com website  */}
                                             <div className="line" />
