@@ -51,7 +51,9 @@ const Contact = () => {
                                         </div>
 
                                         <form className="row px-3 mb-4 mx-1" ref={form} onSubmit={sendEmail}> 
-                                       {/*   //change-4  (here only "ref={form} onSubmit={sendEmail}" portion is added as new funtionality for sending the email) and the value of 'name' attribute(for e.g: name="user_name") of each input does matters because the value of "name" is set as a variable in the templete of email at emailjs.com website  */}
+                                       {/*   //change-4  (here only "ref={form} onSubmit={sendEmail}" portion is added as new funtionality for sending the email).
+                                          and the value of 'name' attribute(for e.g: name="user_name") of each input does matters because the value of "name" is set as
+                                          a variable in the templete of email at emailjs.com website  */}
                                             <div className="line" />
                                             <small className="or text-center">OR</small>
                                             <div className="line" />
